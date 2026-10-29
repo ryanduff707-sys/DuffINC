@@ -189,7 +189,7 @@
     <p>Call, email, or send a DM to set up a consultation or check availability.</p>
     <div class="contact-actions">
       <a href="tel:+17079811027" class="btn">Call +1 (707) 981-1027</a>
-      <a href="mailto:ryanduff707@gmail.com" class="btn btn-line">Email us</a>
+      <a href="mailto:ryanduff707@gmail.com" class="btn btn-line" id="email-btn">Email us</a>
       <a href="https://www.instagram.com/r.duff.707/" class="btn btn-line" target="_blank" rel="noopener">Instagram</a>
     </div>
   </div>
@@ -221,6 +221,14 @@
     menu.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
   }));
+   const emailBtn = document.getElementById('email-btn');
+  emailBtn.addEventListener('click', (e) => {
+    const isPhone = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (!isPhone) {
+      e.preventDefault();
+      window.open('https://mail.google.com/mail/?view=cm&fs=1&to=ryanduff707@gmail.com&su=Tattoo%20Consultation', '_blank');
+    }
+  });
 </script>
 </body>
 </html>
