@@ -79,7 +79,7 @@
     display: grid; place-items: center; color: var(--ink-soft); font-size: .9rem; overflow: hidden;
   }
   .gallery figure:first-child { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
-  .gallery img { width: 100%; height: 100%; object-fit: cover; }
+  .gallery img, .gallery video { width: 100%; height: 100%; object-fit: cover; }
 
   /* Booking steps */
   #how { background: var(--paper-2); border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); }
@@ -158,13 +158,10 @@
       <h2>Recent work</h2>
       <p>More on Instagram: <a href="https://www.instagram.com/r.duff.707/" target="_blank" rel="noopener">@r.duff.707</a></p>
     </div>
-    <div class="gallery">
-      <figure>Photo 1</figure>
-      <figure>Photo 2</figure>
-      <figure>Photo 3</figure>
-      <figure>Photo 4</figure>
-      <figure>Photo 5</figure>
-      <figure>Photo 6</figure>
+<div class="gallery">
+      <figure><video src="tattoo-video-1.mp4" autoplay muted loop playsinline></video></figure>
+      <figure><img src="tattoo-1.jpg" alt="Custom tattoo by Duffy's Art Studio"></figure>
+      <figure><video src="tattoo-video-2.mp4" autoplay muted loop playsinline preload="metadata"></video></figure>
     </div>
   </div>
 </section>
