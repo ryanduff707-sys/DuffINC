@@ -119,6 +119,12 @@
     .nav ul a { display: block; padding: 14px 16px; border-top: 1px solid rgba(28,23,20,.2); border-bottom: 0; }
     section { padding: 60px 0; }
   }
+  .gallery { grid-template-columns: repeat(3, 1fr); }
+  .gallery figure, .gallery figure:first-child { grid-column: auto; grid-row: auto; aspect-ratio: 3 / 4; }
+  @media (max-width: 820px) {
+    .gallery { grid-template-columns: 1fr; }
+    .gallery figure, .gallery figure:first-child { aspect-ratio: 4 / 5; }
+  }
 </style>
 </head>
 <body>
